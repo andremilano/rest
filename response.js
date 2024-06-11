@@ -4,12 +4,14 @@ const response = (statusCode, data, message, res) => {
             status: statusCode,
             data: data,
         },
-        pesan: message,
-        pagination: {
-            prev: "",
-            next: "",
-            total: ""
-        }
+        pesan: message
+
+        // optional
+        // pagination: {
+        //     prev: "",
+        //     next: "",
+        //     total: ""
+        // }
     })
 }
 
