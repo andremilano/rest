@@ -12,20 +12,20 @@ const response = require('./response.js')
 app.use(bodyParser.json())
 
 // ambil data dari db
-//app.get('/', (req, res) => {
-//const sql = 'SELECT * FROM mahasiswa'
+app.get('/', (req, res) => {
+    const sql = 'SELECT * FROM mahasiswa'
 
-// query db
-//db.query(sql, (error, hasil) => {
-// hasil data db 
-//         if (error) {
-//             response(400, [], "gagal", res)
-//             return
-//         }
-//         response(200, hasil, "data diambil dari mahasiswa", res)
+    // query db
+    db.query(sql, (error, hasil) => {
+        // hasil data db 
+        if (error) {
+            response(400, [], "gagal", res)
+            return
+        }
+        response(200, hasil, "data diambil dari mahasiswa", res)
 
-//     })
-// })
+    })
+})
 
 // app.get('/nim', (req, res) => {
 
