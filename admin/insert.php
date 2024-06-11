@@ -9,8 +9,8 @@ if (isset($_POST['submit'])) {
 
     $insert = "INSERT INTO mahasiswa(nim, nama, alamat) VALUES('$nim','$nama','$alamat')";
     mysqli_query($conn, $insert);
+    echo "Data Berhasil Ditambahkan";
     header('location:insert.php');
-    echo "Data berhasil ditambahkan";
 }
 ?>
 
